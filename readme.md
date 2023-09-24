@@ -16,25 +16,35 @@
     
 ## Download the simulation
 
-   mkdir -p ~/catkin_ws/src cd ~/catkin_ws/src git clone https://github.com/tuanluong88/ackermann_vehicle.git
+    mkdir -p ~/catkin_ws/src cd ~/catkin_ws/src git clone https://github.com/tuanluong88/ackermann_vehicle.git
 
-cd ~/catkin_ws rosdep install --from-paths src --ignore-src -r -y catkin_make
-## Running
-## Launch the car model in gazebo
+    cd ~/catkin_ws 
+    rosdep install --from-paths src --ignore-src -r -y catkin_make
+
+## Launch the ackermann model in gazebo
 ## Open a terminal
-  roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch
+
+   roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch
   
 ## Steering command with ackermann_msgs type
+
     http://docs.ros.org/en/api/ackermann_msgs/html/msg/AckermannDrive.html
+    
 ## Open another terminal
+
     rostopic pub -r 10 /ackermann_cmd ackermann_msgs/AckermannDrive "{steering_angle: 1.0, steering_angle_velocity: 0.0, speed: 1.0, acceleration: 0.0, jerk: 0.0}"
-## with
-/ackermann_vehicle/ackermann_vehicle_gazebo/scripts$
-## Open a terminal and Rrun the following commands:
+    
+## The model can be also controlled by sending Twist command (linear and angular velocities) 
+
+    http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html
+    go to:
+    /ackermann_vehicle/ackermann_vehicle_gazebo/scripts$
+    
+    # Open a terminal and Rrun the following commands:
     ./cmd_vel_to_ackermann_drive.py
     
-## The python file will wait for /cmd_vel inputs.
-## Open another terminal
+    # The python file will wait for /cmd_vel inputs.
+    # Open another terminal
 
     rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.2}}'
 
