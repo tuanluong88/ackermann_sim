@@ -1,4 +1,4 @@
-## Tested version:
+# Tested version:
 
     ROS Noetic running Ubuntu 20.04
     Gazebo11 (embedded in Ubuntu 20.04)
@@ -6,7 +6,7 @@
 
 # Installation 
 
-    ## install ros noetic
+## Install ros noetic
 
       http://wiki.ros.org/noetic/Installation/Ubuntu (follow until Desktop-Full Install)
     # Install necessary package:
@@ -15,7 +15,7 @@
     sudo apt install ros-noetic-ros-control ros-noetic-ros-controllers 
     sudo apt-get install ros-noetic-teleop-twist-keyboard
     
-    ## Download the simulation
+## Download the simulation
 
     mkdir -p ~/catkin_ws/src cd ~/catkin_ws/src git clone https://github.com/tuanluong88/ackermann_vehicle.git
 
@@ -27,7 +27,7 @@
     # Open a terminal
     roslaunch ackermann_vehicle_gazebo ackermann_vehicle.launch
   
-    # Control method 1: Steering command with ackermann_msgs type
+## Control method 1: Steering command with ackermann_msgs type
 
     http://docs.ros.org/en/api/ackermann_msgs/html/msg/AckermannDrive.html
     
@@ -35,7 +35,7 @@
 
     rostopic pub -r 10 /ackermann_cmd ackermann_msgs/AckermannDrive "{steering_angle: 1.0, steering_angle_velocity: 0.0, speed: 1.0, acceleration: 0.0, jerk: 0.0}"
     
-    # Control method 2: the model can be also controlled by sending Twist command (linear and angular velocities) 
+## Control method 2: the model can be also controlled by sending Twist command (linear and angular velocities) 
 
     http://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html
     go to:
