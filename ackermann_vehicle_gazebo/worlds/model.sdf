@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <model name='building_template_model'>
+    <pose frame=''>-2.98967 4.02339 0 0 -0 0</pose>
+  
+    <static>1</static>
+  </model>
+</sdf>

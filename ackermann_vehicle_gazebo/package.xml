@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+  <name>ackermann_vehicle_gazebo</name>
+  <version>0.1.3</version>
+  <description>
+    Gazebo simulation of an Ackermann steering vehicle.
+  </description>
+
+  <maintainer email="luongtuan@g.skku.edu">
+    Tuan Luong
+  </maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>ackermann_msgs</run_depend>
+  <run_depend>ackermann_vehicle_description</run_depend>
+  <run_depend>controller_manager</run_depend>
+  <run_depend>controller_manager_msgs</run_depend>
+  <run_depend>effort_controllers</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>joy</run_depend>
+  <run_depend>teleop_twist_joy</run_depend>
+
+  <export>
+    <architecture_independent/>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+</package>
