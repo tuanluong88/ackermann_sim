@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 
-
-
 <launch>
   <arg name="namespace" default="ackermann_vehicle"/>
 
@@ -17,4 +15,9 @@
       <param name="publish_frequency" value="30.0"/>
     </node>
   </group>
+
+   <!-- RViz 
+  <arg name="rviz" default="true"/>
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" respawn="false" 
+       output="screen" args="-d $(find ackermann_vehicle_description)/rviz/ackermann_model.rviz"/>-->
 </launch>
