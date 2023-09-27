@@ -22,7 +22,7 @@ right_rear_wheel:
   diameter: 0.14605
 
 # The equilibrium position of each shock absorber is wheel_travel / 2.
-# wheel_travel, defined in em_3905.urdf.xacro, is 0.084 meters.
+# wheel_travel, is 0.084 meters.
 
 shock_absorbers:
   - controller_name: left_front_shock_ctrlr

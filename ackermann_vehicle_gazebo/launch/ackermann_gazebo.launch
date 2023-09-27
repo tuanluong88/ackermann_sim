@@ -59,4 +59,9 @@ Arguments:
       <rosparam file="$(find ackermann_vehicle_gazebo)/config/ackermann_ctrlr_params.yaml" command="load"/>
     </node>
   </group>
+    <!-- RViz -->
+  <arg name="rviz" default="true"/>
+  <node if="$(arg rviz)" pkg="rviz" type="rviz" name="$(anon rviz)" 
+        respawn="false" output="screen" args="-d $(find ackermann_vehicle_description)/rviz/ackermann_model.rviz" />
+
 </launch>
